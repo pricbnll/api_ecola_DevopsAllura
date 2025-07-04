@@ -1,0 +1,21 @@
+# A seção 'services' define os diferentes containers que compõem a sua aplicação.
+services:
+  # 'api' é o nome que damos ao nosso serviço principal (a aplicação FastAPI).
+  api:
+    # Define o nome da imagem Docker que será construída ou usada para este serviço.
+    image: api-allura-devops
+    # Instrui o Docker Compose a construir a imagem a partir de um Dockerfile.
+    # O '.' indica que o Dockerfile está no mesmo diretório que este arquivo (o contexto de build).
+    build: .
+    # Define um nome fixo para o container, facilitando referenciá-lo com comandos Docker.
+    container_name: api-allura-devops
+    # Mapeia as portas entre a máquina host e o container.
+    ports:
+      # Expõe a porta 8000 do container na porta 8000 da sua máquina.
+      # Formato: "HOST:CONTAINER"
+      - "8000:8000"
+    # Monta o volume nomeado 'db_data' no diretório '/app' dentro do container.
+    # Isso garante que o banco de dados SQLite (escola.db) seja salvo no volume
+    # e não seja perdido quando o container for recriado.
+    volumes:
+      - .:/app
