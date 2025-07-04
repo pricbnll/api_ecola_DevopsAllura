@@ -98,3 +98,11 @@ Se preferir não usar o `docker-compose`, você pode gerenciar o container manua
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+
+## Autenticando no Google Cloud
+
+   ```
+   gcloud auth login
+   gcloud config set project PROJECT_ID
+   gcloud run deploy --port=8000
+   ```
