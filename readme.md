@@ -105,4 +105,5 @@ Se preferir não usar o `docker-compose`, você pode gerenciar o container manua
    gcloud auth login
    gcloud config set project PROJECT_ID
    gcloud run deploy --port=8000
+   
    ```
