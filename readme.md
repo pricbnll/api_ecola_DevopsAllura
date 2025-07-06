@@ -103,7 +103,7 @@ Se preferir não usar o `docker-compose`, você pode gerenciar o container manua
 
    ```
    gcloud auth login
-   gcloud config set project PROJECT_ID
+   gcloud config set project PROJECT_ID # Substitua pelo ID do seu projeto -  gcloud config set project allura-imersaodevops
    gcloud run deploy --port=8000
    
    ```
