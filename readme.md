@@ -107,3 +107,7 @@ Se preferir não usar o `docker-compose`, você pode gerenciar o container manua
    gcloud run deploy --port=8000
    
    ```
+
+   ## Teste a api-allura-devops pela url da Google Cloud
+
+   [link da Api](https://api-allura-devops-429672550229.southamerica-east1.run.app/docs#/)
